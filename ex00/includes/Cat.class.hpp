@@ -6,7 +6,7 @@
 /*   By: malbrand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 22:33:56 by malbrand          #+#    #+#             */
-/*   Updated: 2022/07/07 23:02:29 by malbrand         ###   ########.fr       */
+/*   Updated: 2022/07/07 23:33:39 by malbrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ class Cat : public Animal
 				Cat(void);
 				Cat(const Cat &rhs);
 				~Cat(void);
+
+				Cat	&operator=(const Cat &rhs);
 
 				void		makeSound(void) const;
 				std::string	getType(void) const;	

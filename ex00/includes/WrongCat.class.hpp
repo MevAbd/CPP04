@@ -6,7 +6,7 @@
 /*   By: malbrand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 22:33:56 by malbrand          #+#    #+#             */
-/*   Updated: 2022/07/07 23:10:42 by malbrand         ###   ########.fr       */
+/*   Updated: 2022/07/07 23:34:57 by malbrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ class WrongCat : public Animal
 				WrongCat(void);
 				WrongCat(const WrongCat &rhs);
 				~WrongCat(void);
+				WrongCat	&operator=(const WrongCat &rhs);
 
 				void		makeSound(void) const;
 				std::string	getType(void) const;	

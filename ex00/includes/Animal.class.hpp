@@ -6,7 +6,7 @@
 /*   By: malbrand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 22:11:32 by malbrand          #+#    #+#             */
-/*   Updated: 2022/07/07 23:06:08 by malbrand         ###   ########.fr       */
+/*   Updated: 2022/07/07 23:33:07 by malbrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ class Animal
 				Animal(const Animal &rhs);
 				~Animal(void);
 
+				Animal	&operator=(const Animal &rhs);
 				void		makeSound(void) const;				
 				std::string	getType(void) const;
 };

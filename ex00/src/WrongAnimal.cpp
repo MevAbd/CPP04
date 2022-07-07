@@ -6,7 +6,7 @@
 /*   By: malbrand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 22:17:35 by malbrand          #+#    #+#             */
-/*   Updated: 2022/07/07 23:09:47 by malbrand         ###   ########.fr       */
+/*   Updated: 2022/07/07 23:37:41 by malbrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,4 +39,10 @@ void	WrongAnimal::makeSound(void) const
 std::string	WrongAnimal::getType(void)const
 {
 	return (this->_type);
+}
+
+WrongAnimal	&WrongAnimal::operator=(const WrongAnimal &rhs)
+{
+	this->_type = rhs._type;
+	return (*this);
 }

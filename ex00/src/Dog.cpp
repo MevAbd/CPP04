@@ -6,7 +6,7 @@
 /*   By: malbrand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 22:35:32 by malbrand          #+#    #+#             */
-/*   Updated: 2022/07/07 23:05:34 by malbrand         ###   ########.fr       */
+/*   Updated: 2022/07/07 23:37:17 by malbrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,3 +41,8 @@ std::string	Dog::getType(void)const
 	return (this->_type);
 }
 
+Dog	&Dog::operator=(const Dog &rhs)
+{
+	this->_type = rhs._type;
+	return (*this);
+}

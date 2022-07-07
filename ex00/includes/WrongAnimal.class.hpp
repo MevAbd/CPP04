@@ -6,7 +6,7 @@
 /*   By: malbrand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 23:07:58 by malbrand          #+#    #+#             */
-/*   Updated: 2022/07/07 23:08:52 by malbrand         ###   ########.fr       */
+/*   Updated: 2022/07/07 23:34:31 by malbrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ class WrongAnimal
 				WrongAnimal(void);
 				WrongAnimal(const WrongAnimal &rhs);
 				~WrongAnimal(void);
+				WrongAnimal	&operator=(const WrongAnimal &rhs);
 
 				void		makeSound(void) const;				
 				std::string	getType(void) const;
