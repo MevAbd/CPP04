@@ -6,7 +6,7 @@
 /*   By: malbrand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 23:07:58 by malbrand          #+#    #+#             */
-/*   Updated: 2022/07/07 23:34:31 by malbrand         ###   ########.fr       */
+/*   Updated: 2022/07/08 00:34:56 by malbrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,17 @@
 
 class WrongAnimal
 {
-	private :
+	protected :
 				std::string	_type;
 
 	public :
 				WrongAnimal(void);
+				WrongAnimal(const std::string &type);
 				WrongAnimal(const WrongAnimal &rhs);
-				~WrongAnimal(void);
+				virtual ~WrongAnimal(void);
 				WrongAnimal	&operator=(const WrongAnimal &rhs);
 
-				void		makeSound(void) const;				
+				virtual void		makeSound(void) const;				
 				std::string	getType(void) const;
 };
 

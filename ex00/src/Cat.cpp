@@ -6,19 +6,19 @@
 /*   By: malbrand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 22:35:32 by malbrand          #+#    #+#             */
-/*   Updated: 2022/07/07 23:36:53 by malbrand         ###   ########.fr       */
+/*   Updated: 2022/07/08 00:27:40 by malbrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.class.hpp"
 
-Cat::Cat(void) : _type("Cat")
+Cat::Cat(void) : Animal("Cat")
 {
 	std::cout << "~~Cat Constructor" << std::endl;
 	return ;
 }
 
-Cat::Cat(const Cat &rhs) : _type("Cat")
+Cat::Cat(const Cat &rhs) : Animal("Cat")
 {
 	*this = rhs;
 	std::cout << "~~Cat Copy Constructor" << std::endl;
@@ -34,11 +34,6 @@ Cat::~Cat(void)
 void	Cat::makeSound(void) const
 {
 	std::cout << "Cat : Miaou... Miaou.. Miaou." << std::endl;
-}
-
-std::string	Cat::getType(void)const
-{
-	return (this->_type);
 }
 
 Cat	&Cat::operator=(const Cat &rhs)

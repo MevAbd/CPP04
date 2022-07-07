@@ -6,13 +6,19 @@
 /*   By: malbrand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 22:17:35 by malbrand          #+#    #+#             */
-/*   Updated: 2022/07/07 23:37:41 by malbrand         ###   ########.fr       */
+/*   Updated: 2022/07/08 00:33:28 by malbrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "WrongAnimal.class.hpp"
 
 WrongAnimal::WrongAnimal(void) : _type("WrongAnimal")
+{
+	std::cout << "~~WrongAnimal Constructor" << std::endl;
+	return ;
+}
+
+WrongAnimal::WrongAnimal(const std::string &type) : _type(type)
 {
 	std::cout << "~~WrongAnimal Constructor" << std::endl;
 	return ;
