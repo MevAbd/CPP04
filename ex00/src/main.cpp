@@ -6,7 +6,7 @@
 /*   By: malbrand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 22:24:47 by malbrand          #+#    #+#             */
-/*   Updated: 2022/07/08 00:20:24 by malbrand         ###   ########.fr       */
+/*   Updated: 2022/07/08 01:36:34 by malbrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,5 +102,9 @@ int	main(void)
 	delete WrongAnimal_a;
 	std::cout << std::endl << std::endl;
 
+
+	
+	const Animal		*dog = new Dog();
+	delete dog;
 	return 0;
 }

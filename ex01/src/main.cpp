@@ -6,7 +6,7 @@
 /*   By: malbrand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 22:24:47 by malbrand          #+#    #+#             */
-/*   Updated: 2022/07/08 03:40:14 by malbrand         ###   ########.fr       */
+/*   Updated: 2022/07/08 04:04:19 by malbrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,16 @@ int	main(void)
 	std::cout<< std::endl;
 	for (int i = 0; i < 10; i++)
 		delete array[i];
+	std::cout<< std::endl;
+
+	const	Animal *A = new Dog();
+	std::cout<< std::endl;
+	const	Animal *B = new Cat();
+	std::cout<< std::endl;
+
+	delete A;
+	std::cout<< std::endl;
+	delete B;
 	std::cout<< std::endl;
 	return 0;
 }
