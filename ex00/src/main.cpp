@@ -106,5 +106,16 @@ int	main(void)
 	
 	const Animal		*dog = new Dog();
 	delete dog;
+
+
+
+	const Animal * animal_ptr = new Cat();
+
+	animal_ptr->makeSound();
+	delete animal_ptr;
+
+	const WrongAnimal * wronganimal_ptr = new WrongCat();
+
+	wronganimal_ptr->makeSound();
 	return 0;
 }

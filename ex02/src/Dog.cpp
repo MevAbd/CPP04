@@ -6,7 +6,7 @@
 /*   By: malbrand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 22:35:32 by malbrand          #+#    #+#             */
-/*   Updated: 2022/07/08 05:05:40 by malbrand         ###   ########.fr       */
+/*   Updated: 2022/07/12 16:49:49 by malbrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ Dog::Dog(const Dog &rhs) : AAnimal("Dog")
 {
 	std::cout << "~~Dog Copy Constructor" << std::endl;
 	*this = rhs;
-	_brain = new Brain();
 	return ;
 }
 
@@ -42,5 +41,8 @@ void	Dog::makeSound(void) const
 Dog	&Dog::operator=(const Dog &rhs)
 {
 	this->_type = rhs._type;
+	if (this->_brain)
+		delete this->_brain;
+	this->_brain = new Brain(*rhs._brain);
 	return (*this);
 }

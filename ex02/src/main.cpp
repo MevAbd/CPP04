@@ -19,7 +19,7 @@
 
 int	main(void)
 {
-	//const AAnimal	animal("fish");
+	//const AAnimal	animal("blop");
 	//std::cout<< std::endl;
 	const Dog		dog = Dog();
 	std::cout<< std::endl;
